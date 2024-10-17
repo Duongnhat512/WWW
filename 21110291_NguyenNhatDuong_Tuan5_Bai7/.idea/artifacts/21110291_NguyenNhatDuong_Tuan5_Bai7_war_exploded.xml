@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="21110291_NguyenNhatDuong_Tuan5_Bai7:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/21110291_NguyenNhatDuong_Tuan5_Bai7_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="21110291_NguyenNhatDuong_Tuan5_Bai7" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="21110291_NguyenNhatDuong_Tuan5_Bai7/web/Web" />
+      <element id="javaee-facet-resources" facet="21110291_NguyenNhatDuong_Tuan5_Bai7/web/Web2" />
+    </root>
+  </artifact>
+</component>

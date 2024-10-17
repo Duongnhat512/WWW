@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Form Student</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="/registration-form" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <label for="fname">First name</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="fname" name="fname">
+                    (max 30 characters a-z and A-Z)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="lname">Last name</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="lname" name="lname">
+                    (max 30 characters a-z and A-Z)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label >Date of birth</label>
+                </div>
+                <div class="col-8">
+                    <select name="day" id="day">
+                        <option value="">Day</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                    <select id="month" name="month">
+                        <option value="">Month</option>
+                        <script>
+                            for (let i = 1; i <= 12; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                    <select id="year" name="year">
+                        <option value="">Year</option>
+                        <script>
+                            const currentYear = new Date().getFullYear();
+                            for (let i = currentYear; i >= 1900; i--) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-8">
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="mobilenum">Mobile Number</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="mobilenum" name="mobilenum">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label>Gender</label>
+                </div>
+                <div class="col-8">
+                    <label for="gender1">Male</label>
+                    <input type="radio" name="gender" id="gender1" value="Male">
+                    <label for="gender2">Female</label>
+                    <input type="radio" name="gender" id="gender2" value="Female">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="address">Address</label>
+                </div>
+                <div class="col-8">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="city">City</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="city" name="city">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="state">State</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="state" name="state">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="pincode">Pin code</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="pincode" name="pincode">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="country" name="country">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label >Hobbies</label>
+                </div>
+                <div class="col-8">
+                    <label for="hobby1">Reading</label>
+                    <input type="checkbox" name="hobbies" id="hobby1" value="Reading">
+                    <label for="hobby2">Singing</label>
+                    <input type="checkbox" name="hobbies" id="hobby2" value="Singing">
+                    <label for="hobby3">Dancing</label>
+                    <input type="checkbox" name="hobbies" id="hobby3" value="Dancing">
+                    <label for="hobby4">Sketching</label>
+                    <input type="checkbox" name="hobbies" id="hobby4" value="Sketching">
+                    <label for="hobby5">Others</label>
+                    <input type="checkbox" name="hobbies" id="hobby5" value="Others">
+                    <input type="text" name="Others">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+
+                </div>
+                <div class="col-8">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label>Course applies for</label>
+                </div>
+                <div class="col-8">
+                    <label for="course1">BCA</label>
+                    <input type="radio" name="course" value="BCA" id="course1">
+                    <label for="course2">B.Com</label>
+                    <input type="radio" name="course" value="B.Com" id="course2">
+                    <label for="course3">B.Sc</label>
+                    <input type="radio" name="course" value="B.Sc" id="course3">
+                    <label for="course4">B.A</label>
+                    <input type="radio" name="course" value="B.A" id="course4">
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">Submit</button>
+        </div>
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

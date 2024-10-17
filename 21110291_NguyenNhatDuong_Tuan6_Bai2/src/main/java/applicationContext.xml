@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myFortune" class="libs.HappyFortuneService">
+	</bean>
+
+	<bean id="myCricketCoach" class="libs.CricketCoach">
+		<property name="fortuneService" ref="myFortune"></property>
+		<property name="emailAddress" value="thegoodcoach@gmail.com"></property>
+		<property name="team" value="India National"></property>
+	</bean>
+
+	<bean id="myTennisCoach" class="libs.TennisCoach">
+		<constructor-arg ref="myFortune"></constructor-arg>
+	</bean>
+
+	<bean id="myCoach" class="libs.BaseballCoach">
+		<constructor-arg ref="myFortune"></constructor-arg>
+	</bean>
+</beans>
