@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lmao</title>
+</head>
+<body>
+<h1>Danh sach san pham</h1>
+<a href="/showFormAdd">Add</a>
+<div>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>description</th>
+            <th>Price</th>
+            <th>Register date</th>
+            <th>cart id</th>
+            <th>Chuc nang</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.code}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.description}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.registerDate}"></td>
+            <td th:text="${product.cart.id}"></td>
+            <td>
+                <a th:href="@{'/detail/' + ${product.id}}">Details</a>
+                <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
